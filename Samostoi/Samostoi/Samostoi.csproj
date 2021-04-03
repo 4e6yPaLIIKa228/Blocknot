@@ -142,5 +142,14 @@
   <ItemGroup>
     <Resource Include="img\edit-select-all_4553.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\stock_line-spacing-1_9510.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\cog-icon-2-48x48_4272.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\package_settings_2119.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

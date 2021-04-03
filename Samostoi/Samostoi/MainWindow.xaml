@@ -86,7 +86,7 @@
         <TabControl HorizontalAlignment="Left" Height="802" Margin="0,67,0,0" VerticalAlignment="Top" Width="1592">
             <TabItem Header="New document">
                 <Grid Background="#FFE5E5E5">
-                    <RichTextBox HorizontalAlignment="Left" Height="774" VerticalAlignment="Top" Width="1586" BorderBrush="White" SelectionBrush="White" Style="{DynamicResource RichTextBoxStyle1}">
+                    <RichTextBox x:Name="RichTxBox" HorizontalAlignment="Left" Height="774" VerticalAlignment="Center" Width="1582" BorderBrush="White" SelectionBrush="White" Style="{DynamicResource RichTextBoxStyle1}" MinWidth="4" Block.LineHeight="7">
                         <FlowDocument/>
                     </RichTextBox>
                 </Grid>
@@ -94,23 +94,23 @@
         </TabControl>
         <Menu Height="25" VerticalAlignment="Top">
             <MenuItem Header="Файл">
-                <MenuItem Header="Создать" >
+                <MenuItem Header="Создать" Click="MenuItem_Click_3" >
                     <MenuItem.Icon>
                         <Image Source="img\create_9936.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Открыть" >
+                <MenuItem Header="Открыть" Click="MenuItem_Click_1" >
                     <MenuItem.Icon>
                         <Image Source="img\folder_red_open_7675.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Сохранить" >
+                <MenuItem Header="Сохранить" Click="MenuItem_Click_2" >
                     <MenuItem.Icon>
                         <Image Source="img/3floppy_unmount_8567.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator />
-                <MenuItem Header="Выход" >
+                <MenuItem Header="Выход" Click="MenuItem_Click" >
                     <MenuItem.Icon>
                         <Image Source="img/windowscloseprogram_8097.png"></Image>
                     </MenuItem.Icon>
@@ -150,19 +150,19 @@
                 </MenuItem>
                 <MenuItem Header="Выделить строку" >
                     <MenuItem.Icon>
-                        <Image Source="img/windowscloseprogram_8097.png"></Image>
+                        <Image Source="img/stock_line-spacing-1_9510.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Сервис" >
                 <MenuItem Header="Настройки" >
                     <MenuItem.Icon>
-                        <Image Source="img/windowscloseprogram_8097.png"></Image>
+                        <Image Source="img/cog-icon-2-48x48_4272.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Параметры" >
                     <MenuItem.Icon>
-                        <Image Source="img/windowscloseprogram_8097.png"></Image>
+                        <Image Source="img/package_settings_2119.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>

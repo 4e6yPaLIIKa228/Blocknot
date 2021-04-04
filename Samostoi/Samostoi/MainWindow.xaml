@@ -86,9 +86,13 @@
         <TabControl HorizontalAlignment="Left" Height="802" Margin="0,67,0,0" VerticalAlignment="Top" Width="1592">
             <TabItem Header="New document">
                 <Grid Background="#FFE5E5E5">
-                    <RichTextBox x:Name="RichTxBox" HorizontalAlignment="Left" Height="774" VerticalAlignment="Center" Width="1582" BorderBrush="White" SelectionBrush="White" Style="{DynamicResource RichTextBoxStyle1}" MinWidth="4" Block.LineHeight="7">
-                        <FlowDocument/>
-                    </RichTextBox>
+                    <DockPanel>
+                        <RichTextBox x:Name="RichTxBox" SpellCheck.IsEnabled="True"  Language="ru-ru" HorizontalAlignment="Left" Height="774" VerticalAlignment="Center" Width="1582" BorderBrush="White" SelectionBrush="#FF033BF9" Style="{DynamicResource RichTextBoxStyle1}" MinWidth="4" Block.LineHeight="7" FontSize="20">
+                        <FlowDocument>
+                                <Paragraph/>
+                            </FlowDocument>
+                        </RichTextBox>
+                        </DockPanel>
                 </Grid>
             </TabItem>
         </TabControl>
@@ -117,33 +121,38 @@
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Правка" >
-                <MenuItem Header="Отменить" >
+                <MenuItem Header="Отменить" Click="MenuItem_Click_4" >
                     <MenuItem.Icon>
                         <Image Source="img/old-edit-undo_9645.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Повторить" >
+                <MenuItem Header="Повторить" Click="MenuItem_Click_6" >
                     <MenuItem.Icon>
                         <Image Source="img/repeat_8461.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator />
-                <MenuItem Header="Вырезать" >
+                <MenuItem Header="Вырезать" Click="MenuItem_Click_5" >
                     <MenuItem.Icon>
                         <Image Source="img/cut_7351.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Копировать" >
+                <MenuItem Header="Копировать" Click="MenuItem_Click_7" >
                     <MenuItem.Icon>
                         <Image Source="img/file_copy_8637.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Вставить" >
+                <MenuItem Header="Вставить" Click="MenuItem_Click_8" >
                     <MenuItem.Icon>
                         <Image Source="img/paste_2890.png"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Выделить все" >
+                <MenuItem Header="Шрифт и размер" Click="MenuItem_Click_10" >
+                    <MenuItem.Icon>
+                        <Image Source="img/font_type1_8391.png"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Выделить все" Click="MenuItem_Click_9" >
                     <MenuItem.Icon>
                         <Image Source="img/edit-select-all_4553.png"></Image>
                     </MenuItem.Icon>
@@ -168,10 +177,10 @@
             </MenuItem>
             <MenuItem Header="Справка" ></MenuItem>
         </Menu>
-        <Image HorizontalAlignment="Left" Height="42" Margin="0,25,0,0" VerticalAlignment="Top" Width="42" Source="img/1.jpg"/>
-        <Image HorizontalAlignment="Left" Height="42" Margin="47,25,0,0" VerticalAlignment="Top" Width="42" Source="img/2.jpg"/>
-        <Image HorizontalAlignment="Left" Height="42" Margin="94,25,0,0" VerticalAlignment="Top" Width="42" Source="img/3.jpg"/>
-        <Image HorizontalAlignment="Left" Height="42" Margin="141,25,0,0" VerticalAlignment="Top" Width="42" Source="img/4.jpg"/>
+        <Image HorizontalAlignment="Left" ToolTip="Вырезать" Height="42" Margin="0,25,0,0" VerticalAlignment="Top" Width="42" Source="img/1.jpg" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+        <Image HorizontalAlignment="Left" ToolTip="Новый документ" Height="42" Margin="47,25,0,0" VerticalAlignment="Top" Width="42" Source="img/2.jpg"/>
+        <Image HorizontalAlignment="Left" ToolTip="Вставить" Height="42" Margin="94,25,0,0" VerticalAlignment="Top" Width="42" Source="img/3.jpg" MouseLeftButtonUp="Image_MouseLeftButtonUp_2"/>
+        <Image HorizontalAlignment="Left" ToolTip="Увеличить шрифт" Height="42" Margin="141,25,0,0" VerticalAlignment="Top" Width="42" Source="img/4.jpg" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
         <ComboBox HorizontalAlignment="Left" Margin="188,40,0,0" VerticalAlignment="Top" Width="45" SelectedIndex="13">
             <ComboBoxItem Content="1"/>
             <ComboBoxItem Content="2"/>
@@ -194,11 +203,12 @@
             <ComboBoxItem Content="19"/>
             <ComboBoxItem Content="20"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="233,40,0,0" VerticalAlignment="Top" Width="131" SelectedIndex="0">
-            <ComboBoxItem Content="Times New Roman"/>
+        <ComboBox HorizontalAlignment="Left" Margin="233,40,0,0" VerticalAlignment="Top" Width="131" SelectedIndex="0" >
+            <ComboBoxItem Content="Times New Roman" Selected="ComboBoxItem_Selected"/>
+            <ComboBoxItem Content="Arial"/>
         </ComboBox>
-        <Image HorizontalAlignment="Left" Height="42" Margin="364,25,0,0" VerticalAlignment="Top" Width="42" Source="img/5.jpg"/>
-        <Image HorizontalAlignment="Left" Height="42" Margin="536,25,0,0" VerticalAlignment="Top" Width="42" Source="img/6.jpg"/>
+        <Image HorizontalAlignment="Left" ToolTip="Отправить" Height="42" Margin="364,25,0,0" VerticalAlignment="Top" Width="42" Source="img/5.jpg"/>
+        <Image HorizontalAlignment="Left" ToolTip="Информация" Height="42" Margin="536,25,0,0" VerticalAlignment="Top" Width="42" Source="img/6.jpg"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="411,40,0,0" TextWrapping="Wrap" Text="Enter your email" VerticalAlignment="Top" Width="120"/>
 
     </Grid>

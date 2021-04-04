@@ -151,5 +151,8 @@
   <ItemGroup>
     <Resource Include="img\package_settings_2119.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\font_type1_8391.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

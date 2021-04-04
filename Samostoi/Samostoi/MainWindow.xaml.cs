@@ -17,16 +17,20 @@ using Microsoft.Win32;
 
 
 
+
+
 namespace Samostoi
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+
     {
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -107,6 +111,63 @@ namespace Samostoi
 
             } 
 
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e) //Оtмена действий 
+        {
+            RichTxBox.Undo();
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e) //Вырезать
+        {
+            RichTxBox.Cut();
+        }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)//Повторить
+        {
+            
+        }
+
+        private void MenuItem_Click_7(object sender, RoutedEventArgs e)//Крпировать
+        {
+            RichTxBox.Copy();
+        }
+
+        private void MenuItem_Click_8(object sender, RoutedEventArgs e)//Всавить
+        {
+            RichTxBox.Paste();
+        }
+
+        private void MenuItem_Click_9(object sender, RoutedEventArgs e)//Выбрать все
+        {
+            RichTxBox.SelectAll();
+        }
+
+        private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)//Вырезать(картинка)
+        {
+            RichTxBox.Cut();
+        }
+
+        private void Image_MouseLeftButtonUp_1(object sender, MouseButtonEventArgs e)//Увелечение шрифта(картинка)
+        {
+            RichTxBox.FontSize += 2;
+
+        }
+
+        private void Image_MouseLeftButtonUp_2(object sender, MouseButtonEventArgs e)//Всавить(картинка)
+        {
+            RichTxBox.Paste();
+        }
+
+        private void MenuItem_Click_10(object sender, RoutedEventArgs e)
+        {
+            RichTxBox.FontFamily = new FontFamily("Comic Sans MS");
+
+        }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            RichTxBox.FontFamily = new FontFamily("Comic Sans Syastro");
         }
     }
 }
